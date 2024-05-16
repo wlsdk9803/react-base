@@ -1,5 +1,5 @@
 // import "./App.css";
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "./logo.svg";
 import HelloWorld from "./components/HelloWorld";
 import { CaptionImage } from "./components/CaptionImage";
@@ -16,15 +16,10 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import ThemeButton from "./components/ThemeButton";
 import MyPage from "./components/MyPage";
 import { PlaceHolder } from "./components/PlaceHolder";
-import { Col, Container, ListGroup, Row } from "react-bootstrap";
+import ExampleMain from "./components/ExampleMain";
 
 function App() {
   const [showCount, setShowCount] = useState(true);
-  const [items, setItems] = useState([
-    { id: 1, name: "임세현" },
-    { id: 2, name: "최경서" },
-    { id: 3, name: "박진아" },
-  ]);
   // ListGroup.Item을 클릭했을 때,
   // 해당하는 사람의 정보를 Modal에 Rendering
   // modal-header: id, modal-body: 이름
@@ -61,23 +56,7 @@ function App() {
       </ThemeProvider> */}
       {/* <TodoApp2 /> */}
       {/* <PlaceHolder /> */}
-      <Container fluid>
-        <Row>
-          <Col sm={6} xs={12}>
-            <h1>Users</h1>
-            <ListGroup defaultActiveKey="link1">
-              {items.map((item) => (
-                <ListGroup.Item action key={item.id}>
-                  {item.name}
-                </ListGroup.Item>
-              ))}
-            </ListGroup>
-          </Col>
-          <Col sm={6} xs={12}>
-            <h1>Stocks</h1>
-          </Col>
-        </Row>
-      </Container>
+      <ExampleMain />
     </div>
   );
 }

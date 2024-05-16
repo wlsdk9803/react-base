@@ -30,7 +30,7 @@ export const TodoApp2 = () => {
       }}
     >
       <div className="global">
-        <TodoAppInput />
+        <TodoAppInput setColor={setColor} />
         <TodoAppSearch />
         <TodoAppColorButton setColor={setColor} />
         <TodoAppItems />

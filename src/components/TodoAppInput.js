@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./TodoApp.css";
 import { useTodo } from "./TodoApp2";
 
-const TodoAppInput = () => {
+const TodoAppInput = (props) => {
   const { color, setColor, text, setText, todoArr, setTodoArr } = useTodo();
   const reset = () => {
     setText("");
-    setColor("white");
+    props.setColor("white");
   };
 
   const [id, setId] = useState(() => {
